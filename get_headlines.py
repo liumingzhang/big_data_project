@@ -38,6 +38,5 @@ print "printing the search results in file"
 
 with io.open('links.txt',encoding='utf-8', mode='w+') as ns:
 	for link in links:
-		#ns.write(i.encode('ascii','ignore'))
-		ns.write(link.get_text(strip = True)+'\n')
+		ns.write(link.get('href')+'\n')
 
